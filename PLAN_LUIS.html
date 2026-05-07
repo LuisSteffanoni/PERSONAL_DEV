@@ -8,148 +8,125 @@
         body { 
             font-family: Arial, Helvetica, sans-serif; 
             margin: 0; 
-            padding: 20px; 
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+            padding: 15px; 
+            background: linear-gradient(135deg, #0a0f1c 0%, #1a2337 100%);
             color: #e2e8f0; 
             line-height: 1.6; 
         }
         h1, h2, h3 { 
             color: #f1f5f9; 
-            text-shadow: 0 2px 10px rgba(249, 115, 22, 0.4);
+            text-shadow: 0 2px 12px rgba(249, 115, 22, 0.5);
         }
+
         .section { 
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(251, 146, 60, 0.3);
-            padding: 25px; 
-            margin-bottom: 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-            position: relative;
-            overflow: hidden;
-        }
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(249, 115, 22, 0.08) 0%, 
-                rgba(14, 165, 233, 0.06) 50%, 
-                rgba(249, 115, 22, 0.08) 100%);
-            pointer-events: none;
-            border-radius: 20px;
-        }
-
-        .gym-section { background: rgba(249, 115, 22, 0.12); border-color: rgba(251, 146, 60, 0.5); }
-        .drills-section { background: rgba(34, 211, 238, 0.12); border-color: rgba(103, 232, 249, 0.5); }
-        .pool-section { background: rgba(14, 165, 233, 0.15); border-color: rgba(103, 232, 249, 0.6); }
-        .food-section { background: rgba(249, 115, 22, 0.12); border-color: rgba(251, 146, 60, 0.5); }
-
-        table { 
-            background: rgba(15, 23, 42, 0.6); 
-            border-radius: 12px; 
-            overflow: hidden;
-        }
-        th { 
-            background: linear-gradient(90deg, #f97316, #fb923c); 
-            color: white; 
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(251, 146, 60, 0.4);
+            padding: 20px; 
+            margin-bottom: 25px; 
+            border-radius: 22px; 
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
         }
 
         .exercise-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 18px;
             margin-top: 15px;
         }
         .exercise-card {
-            background: rgba(30, 41, 59, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.9);
             border: 1px solid rgba(251, 146, 60, 0.4);
             border-radius: 16px;
-            padding: 14px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5),
-                        inset 0 1px 0 rgba(255,255,255,0.1);
+            padding: 12px;
             text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
             transition: all 0.3s ease;
         }
         .exercise-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.3);
+            transform: translateY(-5px);
             border-color: #fb923c;
         }
-        img { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 10px; 
-            margin: 10px 0; 
-            display: block; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        .exercise-card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
-        .highlight { 
-            background: linear-gradient(90deg, rgba(249,115,22,0.2), rgba(14,165,233,0.15));
-            padding: 18px; 
-            border-left: 6px solid #f97316; 
-            margin: 20px 0; 
-            border-radius: 12px; 
+        .exercise-card p {
+            margin: 6px 0;
+            font-size: 1.05rem;
+        }
+        .exercise-card strong {
+            color: #fb923c;
+        }
+
+        /* TABLA */
+        .table-container { overflow-x: auto; border-radius: 12px; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; background: rgba(15, 23, 42, 0.6); }
+        th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid rgba(251, 146, 60, 0.3); }
+        th { background: linear-gradient(90deg, #f97316, #fb923c); color: white; }
+
+        @media (max-width: 768px) {
+            .exercise-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+            .exercise-card img { height: 110px; }
         }
     </style>
 </head>
 <body>
 
     <div class="section">
-        <h1 style="text-align:center; font-size: 2.2em;">🏈 PLAN INTEGRAL PERSONALIZADO – Luis Miguel Esquivel 2026</h1>
+        <h1 style="text-align:center;">🏈 PLAN INTEGRAL PERSONALIZADO – Luis Miguel Esquivel 2026</h1>
         <p><strong>Objetivo:</strong> Bajar grasa + Ganar masa muscular + Explosividad y agilidad</p>
     </div>
 
     <!-- HORARIO SEMANAL -->
     <div class="section">
         <h2>📅 HORARIO SEMANAL COMPLETO</h2>
-        <table>
-            <tr><th>Día</th><th>Sesión Principal</th><th>Sesión Secundaria (Casa 10-15 min)</th><th>Enfoque</th></tr>
-            <tr><td>Lunes</td><td>Gym: Espalda + Hombros + Pierna Posterior + Potencia</td><td>Estiramientos dinámicos + Equilibrio</td><td>Explosividad</td></tr>
-            <tr><td>Martes</td><td>Gym: Pecho + Brazos + Cuádriceps</td><td>Estiramientos dinámicos + Equilibrio</td><td>Hipertrofia</td></tr>
-            <tr><td>Miércoles</td><td>Alberca Explosiva (2000 m aprox.)</td><td>—</td><td>Agilidad acuática</td></tr>
-            <tr><td>Jueves</td><td>Gym: Pierna Completa + Glúteo + Potencia</td><td>Ladder Drills + Equilibrio</td><td>Piernas explosivas</td></tr>
-            <tr><td>Viernes</td><td>Gym: Espalda + Pecho + Brazos</td><td>Estiramientos dinámicos + Equilibrio</td><td>Hipertrofia upper</td></tr>
-            <tr><td>Sábado</td><td>Opcional: Alberca ligera</td><td>—</td><td>Recuperación</td></tr>
-            <tr><td>Domingo</td><td>Descanso total</td><td>—</td><td>Recuperación</td></tr>
-        </table>
+        <div class="table-container">
+            <table>
+                <tr><th>Día</th><th>Sesión Principal</th><th>Sesión Secundaria</th><th>Enfoque</th></tr>
+                <tr><td>Lunes</td><td>Gym: Espalda + Hombros + Pierna Posterior + Potencia</td><td>Estiramientos + Equilibrio</td><td>Explosividad</td></tr>
+                <tr><td>Martes</td><td>Gym: Pecho + Brazos + Cuádriceps</td><td>Estiramientos + Equilibrio</td><td>Hipertrofia</td></tr>
+                <tr><td>Miércoles</td><td>Alberca Explosiva (2000 m aprox.)</td><td>—</td><td>Agilidad acuática</td></tr>
+                <tr><td>Jueves</td><td>Gym: Pierna Completa + Glúteo + Potencia</td><td>Ladder Drills + Equilibrio</td><td>Piernas explosivas</td></tr>
+                <tr><td>Viernes</td><td>Gym: Espalda + Pecho + Brazos</td><td>Estiramientos + Equilibrio</td><td>Hipertrofia upper</td></tr>
+                <tr><td>Sábado</td><td>Opcional: Alberca ligera</td><td>—</td><td>Recuperación</td></tr>
+                <tr><td>Domingo</td><td>Descanso total</td><td>—</td><td>Recuperación</td></tr>
+            </table>
+        </div>
     </div>
 
-    <!-- GYM -->
-    <div class="section gym-section">
+    <!-- ====================== GYM ====================== -->
+    <div class="section">
         <h2>🏋️ DETALLE DE EJERCICIOS GYM POR DÍA</h2>
 
         <h3>LUNES – Espalda + Hombros + Pierna Posterior + Potencia</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Power+Clean" alt="Power Clean">
                 <p><strong>Power Clean</strong></p>
-
-<grok-card data-id="a8f570" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="3O9Jk"  data-arg-size="SMALL" ></grok-card>
-
                 <p>5×3-5</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="Dominadas">
                 <p><strong>Dominadas / Jalones</strong></p>
                 <p>4×8-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Remo+Barra" alt="Remo">
                 <p><strong>Remo con Barra</strong></p>
                 <p>4×8-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Romanian+Deadlift" alt="RDL">
                 <p><strong>Romanian Deadlift</strong></p>
-
-<grok-card data-id="f63cc8" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="1BscV"  data-arg-size="SMALL" ></grok-card>
-
                 <p>4×8</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Hip+Thrust" alt="Hip Thrust">
                 <p><strong>Hip Thrust</strong></p>
-
-<grok-card data-id="90aa3e" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="WHKZ8"  data-arg-size="SMALL" ></grok-card>
-
                 <p>4×10</p>
             </div>
         </div>
@@ -157,29 +134,28 @@
         <h3>MARTES – Pecho + Brazos + Cuádriceps</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench+Press" alt="Bench">
                 <p><strong>Bench Press</strong></p>
-
-<grok-card data-id="d4ecc1" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="oSapo"  data-arg-size="SMALL" ></grok-card>
-
                 <p>4×6-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press+Militar" alt="Press">
                 <p><strong>Press Militar</strong></p>
                 <p>3×8-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Fondos" alt="Fondos">
                 <p><strong>Fondos Tríceps</strong></p>
                 <p>3×10-12</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Curl+Biceps" alt="Curl">
                 <p><strong>Curl Bíceps</strong></p>
                 <p>3×10-12</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Back+Squat" alt="Squat">
                 <p><strong>Back Squat</strong></p>
-
-<grok-card data-id="1def99" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="Z7jGL"  data-arg-size="SMALL" ></grok-card>
-
                 <p>4×8</p>
             </div>
         </div>
@@ -187,25 +163,27 @@
         <h3>JUEVES – Pierna Completa + Glúteo + Potencia</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Sentadilla" alt="Sentadilla">
                 <p><strong>Sentadilla Profunda</strong></p>
                 <p>4×6-8</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Prensa" alt="Prensa">
                 <p><strong>Prensa 45°</strong></p>
                 <p>4×10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Box+Jumps" alt="Box Jumps">
                 <p><strong>Box Jumps</strong></p>
-
-<grok-card data-id="eb9542" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="sWODz"  data-arg-size="SMALL" ></grok-card>
-
                 <p>4×5</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Lunges" alt="Lunges">
                 <p><strong>Lunges con Salto</strong></p>
                 <p>3×8 por pierna</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Calf" alt="Calf">
                 <p><strong>Calf Raises Explosivos</strong></p>
                 <p>4×12-15</p>
             </div>
@@ -214,93 +192,69 @@
         <h3>VIERNES – Upper Full</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="Dominadas">
                 <p><strong>Dominadas / Remo</strong></p>
                 <p>4×8-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench" alt="Bench">
                 <p><strong>Bench Press</strong></p>
                 <p>4×8-10</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press" alt="Press">
                 <p><strong>Press Militar</strong></p>
                 <p>3×8</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Brazos" alt="Brazos">
                 <p><strong>Curls + Tríceps</strong></p>
                 <p>3×10-12</p>
             </div>
         </div>
     </div>
 
-    <!-- DRILLS Y EQUILIBRIO -->
-    <div class="section drills-section">
-        <h2>🏃 DRILLS, ESTIRAMIENTOS Y EQUILIBRIO (Casa)</h2>
+    <!-- DRILLS -->
+    <div class="section">
+        <h2>🏃 DRILLS, ESTIRAMIENTOS Y EQUILIBRIO</h2>
         <div class="exercise-grid">
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Ladder+Drills" alt="Ladder">
                 <p><strong>Agility Ladder Drills</strong></p>
-
-<grok-card data-id="a5c5d5" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="NCI7a"  data-arg-size="SMALL" ></grok-card>
-
-
-<grok-card data-id="2131e3" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="W2W6h"  data-arg-size="SMALL" ></grok-card>
-
                 <p>10-12 minutos</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Estiramientos" alt="Stretch">
                 <p><strong>Estiramientos Dinámicos</strong></p>
-
-<grok-card data-id="8c2e0e" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="MpxDd"  data-arg-size="SMALL" ></grok-card>
-
-                <p>Leg swings, Arm circles, Lunges con twist</p>
+                <p>Leg swings, Arm circles...</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Equilibrio" alt="Balance">
                 <p><strong>Equilibrio y Pies</strong></p>
-
-<grok-card data-id="eb3a6f" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="RSp1i"  data-arg-size="SMALL" ></grok-card>
-
-                <p>Single leg balance 30-45 seg</p>
-            </div>
-            <div class="exercise-card">
-                <p><strong>Short Foot + Toe Yoga</strong></p>
-
-<grok-card data-id="45c0ea" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="AeVT4"  data-arg-size="SMALL" ></grok-card>
-
-                <p>Activación arco pie</p>
+                <p>Single leg balance</p>
             </div>
         </div>
     </div>
 
     <!-- ALBERCA -->
-    <div class="section pool-section">
-        <h2>🏊 ALBERCA EXPLOSIVA (~2000 m en 1.5 hrs)</h2>
+    <div class="section">
+        <h2>🏊 ALBERCA EXPLOSIVA (~2000 m)</h2>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <p><strong>Calentamiento</strong></p>
-                <p>400 m fácil + 4×50 m drill</p>
-            </div>
-            <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Sprints" alt="Sprints">
                 <p><strong>Sprints Crol Explosivos</strong></p>
-
-<grok-card data-id="548b95" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="ta6QF"  data-arg-size="SMALL" ></grok-card>
-
-                <p>10 × 50 m (descanso 30-40 seg)</p>
+                <p>10 × 50 m</p>
             </div>
             <div class="exercise-card">
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Patada" alt="Patada">
                 <p><strong>Patada Explosiva</strong></p>
-                <p>8 × 25 m con tabla (descanso 20 seg)</p>
-            </div>
-            <div class="exercise-card">
-                <p><strong>Pull con Boya</strong></p>
-
-<grok-card data-id="5df954" data-type="image_card" data-plain-type="render_searched_image"  data-arg-image_id="darm9"  data-arg-size="SMALL" ></grok-card>
-
-                <p>8 × 50 m (descanso 25 seg)</p>
+                <p>8 × 25 m</p>
             </div>
         </div>
     </div>
 
     <!-- ALIMENTACIÓN -->
-    <div class="section food-section">
+    <div class="section">
         <h2>🍗 ALIMENTACIÓN + SUPLEMENTACIÓN</h2>
         <p><strong>Días Bajos:</strong> 2300-2500 kcal <strong>Días Altos:</strong> 2800-3100 kcal</p>
         <ul>
@@ -308,7 +262,6 @@
             <li>250-300g proteína + carbo según día</li>
             <li>Creatina 5g post-entreno</li>
         </ul>
-        <p class="highlight">Agua 4 litros • Sal 4g total</p>
     </div>
 
     <div class="section" style="text-align:center; background: linear-gradient(90deg, #f97316, #0ea5e9); color: white;">
