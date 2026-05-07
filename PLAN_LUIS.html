@@ -39,7 +39,6 @@
             border: 1px solid rgba(251, 146, 60, 0.4);
             border-radius: 16px;
             padding: 12px;
-            text-align: center;
             box-shadow: 0 6px 20px rgba(0,0,0,0.5);
             transition: all 0.3s ease;
         }
@@ -54,24 +53,31 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
-        .exercise-card p {
-            margin: 6px 0;
+        .exercise-card label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
             font-size: 1.05rem;
         }
-        .exercise-card strong {
-            color: #fb923c;
-        }
 
-        /* TABLA */
         .table-container { overflow-x: auto; border-radius: 12px; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; background: rgba(15, 23, 42, 0.6); }
         th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid rgba(251, 146, 60, 0.3); }
         th { background: linear-gradient(90deg, #f97316, #fb923c); color: white; }
 
-        @media (max-width: 768px) {
-            .exercise-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
-            .exercise-card img { height: 110px; }
+        button {
+            background: linear-gradient(90deg, #f97316, #fb923c);
+            color: white;
+            padding: 16px 30px;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
         }
+        button:hover { background: linear-gradient(90deg, #fb923c, #f97316); }
     </style>
 </head>
 <body>
@@ -105,111 +111,92 @@
         <h3>LUNES – Espalda + Hombros + Pierna Posterior + Potencia</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Power+Clean" alt="Power Clean">
-                <p><strong>Power Clean</strong></p>
-                <p>5×3-5</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Power+Clean" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Power Clean</strong> — 5×3-5</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="Dominadas">
-                <p><strong>Dominadas / Jalones</strong></p>
-                <p>4×8-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Dominadas / Jalones</strong> — 4×8-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Remo+Barra" alt="Remo">
-                <p><strong>Remo con Barra</strong></p>
-                <p>4×8-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Remo" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Remo con Barra</strong> — 4×8-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Romanian+Deadlift" alt="RDL">
-                <p><strong>Romanian Deadlift</strong></p>
-                <p>4×8</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=RDL" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Romanian Deadlift</strong> — 4×8</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Hip+Thrust" alt="Hip Thrust">
-                <p><strong>Hip Thrust</strong></p>
-                <p>4×10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Hip+Thrust" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Hip Thrust</strong> — 4×10</label>
             </div>
         </div>
 
         <h3>MARTES – Pecho + Brazos + Cuádriceps</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench+Press" alt="Bench">
-                <p><strong>Bench Press</strong></p>
-                <p>4×6-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Bench Press</strong> — 4×6-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press+Militar" alt="Press">
-                <p><strong>Press Militar</strong></p>
-                <p>3×8-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Press Militar</strong> — 3×8-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Fondos" alt="Fondos">
-                <p><strong>Fondos Tríceps</strong></p>
-                <p>3×10-12</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Fondos" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Fondos Tríceps</strong> — 3×10-12</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Curl+Biceps" alt="Curl">
-                <p><strong>Curl Bíceps</strong></p>
-                <p>3×10-12</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Curl" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Curl Bíceps</strong> — 3×10-12</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Back+Squat" alt="Squat">
-                <p><strong>Back Squat</strong></p>
-                <p>4×8</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Squat" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Back Squat</strong> — 4×8</label>
             </div>
         </div>
 
         <h3>JUEVES – Pierna Completa + Glúteo + Potencia</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Sentadilla" alt="Sentadilla">
-                <p><strong>Sentadilla Profunda</strong></p>
-                <p>4×6-8</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Sentadilla" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Sentadilla Profunda</strong> — 4×6-8</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Prensa" alt="Prensa">
-                <p><strong>Prensa 45°</strong></p>
-                <p>4×10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Prensa" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Prensa 45°</strong> — 4×10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Box+Jumps" alt="Box Jumps">
-                <p><strong>Box Jumps</strong></p>
-                <p>4×5</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Box+Jumps" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Box Jumps</strong> — 4×5</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Lunges" alt="Lunges">
-                <p><strong>Lunges con Salto</strong></p>
-                <p>3×8 por pierna</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Lunges" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Lunges con Salto</strong> — 3×8 por pierna</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Calf" alt="Calf">
-                <p><strong>Calf Raises Explosivos</strong></p>
-                <p>4×12-15</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Calf" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Calf Raises Explosivos</strong> — 4×12-15</label>
             </div>
         </div>
 
         <h3>VIERNES – Upper Full</h3>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="Dominadas">
-                <p><strong>Dominadas / Remo</strong></p>
-                <p>4×8-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Dominadas" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Dominadas / Remo</strong> — 4×8-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench" alt="Bench">
-                <p><strong>Bench Press</strong></p>
-                <p>4×8-10</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Bench" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Bench Press</strong> — 4×8-10</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press" alt="Press">
-                <p><strong>Press Militar</strong></p>
-                <p>3×8</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Press" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Press Militar</strong> — 3×8</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Brazos" alt="Brazos">
-                <p><strong>Curls + Tríceps</strong></p>
-                <p>3×10-12</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Brazos" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Curls + Tríceps</strong> — 3×10-12</label>
             </div>
         </div>
     </div>
@@ -219,19 +206,16 @@
         <h2>🏃 DRILLS, ESTIRAMIENTOS Y EQUILIBRIO</h2>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Ladder+Drills" alt="Ladder">
-                <p><strong>Agility Ladder Drills</strong></p>
-                <p>10-12 minutos</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Ladder" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Agility Ladder Drills</strong> — 10-12 min</label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Estiramientos" alt="Stretch">
-                <p><strong>Estiramientos Dinámicos</strong></p>
-                <p>Leg swings, Arm circles...</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Stretch" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Estiramientos Dinámicos</strong></label>
             </div>
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Equilibrio" alt="Balance">
-                <p><strong>Equilibrio y Pies</strong></p>
-                <p>Single leg balance</p>
+                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Balance" alt="">
+                <label><input type="checkbox" class="exercise-check"> <strong>Equilibrio y Pies</strong> — Single leg</label>
             </div>
         </div>
     </div>
@@ -241,32 +225,42 @@
         <h2>🏊 ALBERCA EXPLOSIVA (~2000 m)</h2>
         <div class="exercise-grid">
             <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Sprints" alt="Sprints">
-                <p><strong>Sprints Crol Explosivos</strong></p>
-                <p>10 × 50 m</p>
-            </div>
-            <div class="exercise-card">
-                <img src="https://via.placeholder.com/300x130/1e2937/ffffff?text=Patada" alt="Patada">
-                <p><strong>Patada Explosiva</strong></p>
-                <p>8 × 25 m</p>
+                <p><strong>Metros nadados hoy:</strong></p>
+                <input type="number" id="metros" placeholder="Ejemplo: 2000" style="width:100%; padding:12px; font-size:1.1rem; border-radius:8px;">
             </div>
         </div>
     </div>
 
-    <!-- ALIMENTACIÓN -->
-    <div class="section">
-        <h2>🍗 ALIMENTACIÓN + SUPLEMENTACIÓN</h2>
-        <p><strong>Días Bajos:</strong> 2300-2500 kcal <strong>Días Altos:</strong> 2800-3100 kcal</p>
-        <ul>
-            <li>Shake mañana: 1L leche proteína + plátanos + 10g glutamina</li>
-            <li>250-300g proteína + carbo según día</li>
-            <li>Creatina 5g post-entreno</li>
-        </ul>
+    <!-- BOTÓN WHATSAPP -->
+    <div class="section" style="text-align:center;">
+        <button onclick="enviarProgreso()">📲 Enviar Progreso por WhatsApp</button>
     </div>
 
-    <div class="section" style="text-align:center; background: linear-gradient(90deg, #f97316, #0ea5e9); color: white;">
-        <p><strong>¡A romperla como en el football, Luis! 💪🏈🏊</strong></p>
-    </div>
+    <script>
+        function enviarProgreso() {
+            let mensaje = "✅ *PROGRESO DEL DÍA - Luis Miguel Esquivel*\n\n";
+            let fecha = new Date().toLocaleDateString('es-MX');
+
+            mensaje += "🏋️ *GYM*\n";
+            document.querySelectorAll('.exercise-check').forEach(check => {
+                if (check.checked) {
+                    let texto = check.parentElement.textContent.replace('checkbox', '').trim();
+                    mensaje += "✅ " + texto + "\n";
+                }
+            });
+
+            const metros = document.getElementById('metros').value;
+            if (metros) {
+                mensaje += `\n🏊 *Alberca:* ${metros} metros\n`;
+            }
+
+            mensaje += `\n📅 Fecha: ${fecha}`;
+
+            const telefono = "4424225756";
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
 
 </body>
 </html>
